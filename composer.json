@@ -1,0 +1,7 @@
+{
+    "name": "aryaskov/php-sql-template-engine",
+    "description": "PHP SQL Template Engine",
+    "require": {
+        "antlr/antlr4-php-runtime": "^0.9.1"
+    }
+}
