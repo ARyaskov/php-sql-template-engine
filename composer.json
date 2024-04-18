@@ -1,6 +1,12 @@
 {
     "name": "aryaskov/php-sql-template-engine",
     "description": "PHP SQL Template Engine",
+    "autoload": {
+        "psr-4": {      
+            "antlr\\antlr4-php-runtime\\": "src/",    
+            "SQLParser\\": [ "Generated/", "src/"]
+        }     
+    },    
     "require": {
         "antlr/antlr4-php-runtime": "^0.9.1"
     }
