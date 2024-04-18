@@ -2,8 +2,9 @@
 
 # How to
 
-antlr4 -Dlanguage=PHP JSON.g4
 
+antlr -Dlanguage=PHP SQLMod.g4 -o Generated -package SQLMod -visitor -no-listener
+composer dump-autoload -o
 # Task
 
 Написать функцию формирования sql-запросов (MySQL) из шаблона и значений параметров.
