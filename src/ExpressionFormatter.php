@@ -33,6 +33,13 @@ final class TreeShapeListener implements ParseTreeListener
     public function __construct(private $visitor, private SQLModParser $parser, private $source_template, private $skipLiteral, private $data = [])
     {
     }
+
+    /**
+     * Callback function called when parser ends up syntax tree branch with terminal value e.g. "?"
+     *
+     * @param TerminalNode $node Current tree node
+     * @return void
+     */
     public function visitTerminal(TerminalNode $node): void
     {
         $terminalValue = $node->getText();
