@@ -76,7 +76,7 @@ final class TreeShapeListener implements ParseTreeListener
     {
         switch ($ctx->getRuleIndex()) {
             case SQLModParser::RULE_optional_logical_expression:
-                $isExcluded = $this->data[$this->currentDataIndex] === $this->skipLiteral;
+                $isExcluded = isset($this->data[$this->currentDataIndex]) && $this->data[$this->currentDataIndex] === $this->skipLiteral;
                 if ($isExcluded) {
                     $this->dimOutput = false;
                     $this->currentDataIndex++;
