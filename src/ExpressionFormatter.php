@@ -46,10 +46,10 @@ final class TreeShapeListener implements ParseTreeListener
             case "}":
                 return;
             default:
-                if ($this->dimOutput == false) {
-                    if ($terminalValue == "(") {
+                if ($this->dimOutput === false) {
+                    if ($terminalValue === "(") {
                         $this->result .= $terminalValue;
-                    } elseif ($terminalValue == ")") {
+                    } elseif ($terminalValue === ")") {
                         $this->result = substr($this->result, 0, -1) . ") ";
                     } else {
                         $this->result .= $terminalValue . " ";
@@ -141,6 +141,19 @@ final class TreeShapeListener implements ParseTreeListener
                     $result = "'{$value}'";
                 }
                 break;
+            case "integer":
+            case "float":
+                $result = $value;
+                break;
+            case "bool":
+                $result = (int) $value;
+                break;
+            case "NULL":
+                $result = "NULL";
+                break;
+            default:
+                print_r($value);
+                throw new \Exception("Unexpected template value type! Type: '{$type}'");
         }
 
         return $result;
@@ -162,21 +175,21 @@ final class TreeShapeListener implements ParseTreeListener
         $val = $this->data[$this->currentDataIndex];
         switch ($directive) {
             case "?":
-                if (strval($val) == "null") {
+                if ($val === null) {
                     $result = "NULL";
                 } else {
                     $result = $this->convert_respect_type($val);
                 }
                 break;
             case "?d":
-                if (strval($val) == "null") {
+                if ($val === null) {
                     $result = "NULL";
                 } else {
                     $result = intval(strval($val));
                 }
                 break;
             case "?f":
-                if (strval($val) == "null") {
+                if ($val === null) {
                     $result = "NULL";
                 } else {
                     $result = floatval(strval($val));
@@ -202,11 +215,11 @@ final class TreeShapeListener implements ParseTreeListener
                 } elseif (is_string($val)) {
                     $result = "`$val`";
                 } else {
-                    echo "Nor array, nor string";
+                    throw new \Exception("Nor array, nor string: {$val}");
                 }
                 break;
             default:
-
+                throw new \Exception("Unknown directive: {$directive}");
         }
 
         if (!$this->dimOutput) {
