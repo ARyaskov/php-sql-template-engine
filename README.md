@@ -4,6 +4,8 @@
 ![PHP Shield](https://img.shields.io/badge/php-%23777BB4.svg?logo=php&logoColor=fff&style=flat)
 ![MySQL Shield](https://img.shields.io/badge/mysql-4479A1.svg?logo=mysql&logoColor=fff&style=flat)
 
+#PARSERS #LEXERS #ANTLR4 #ANTLR4-PHP
+
 # Harnessing
 
 0. First of all, the project is fully functioning, grammar was already compiled, just run it with `php src/test.php`
