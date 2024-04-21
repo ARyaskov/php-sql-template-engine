@@ -1,4 +1,9 @@
-# php-sql-template-engine
+# PHP SQL Template Engine
+
+--
+
+![PHP Shield](https://img.shields.io/badge/php-%23777BB4.svg?logo=php&logoColor=fff&style=flat)
+![MySQL Shield](https://img.shields.io/badge/mysql-4479A1.svg?logo=mysql&logoColor=fff&style=flat)
 
 # Harnessing
 
