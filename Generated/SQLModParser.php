@@ -31,7 +31,7 @@ namespace SQLMod {
                SHARP = 29, ASmall = 30, COMMA = 31, ASTERISK = 32, OPEN_PAR = 33, 
                CLOSE_PAR = 34, OPEN_CURLY_PAR = 35, CLOSE_CURLY_PAR = 36, 
                EQ = 37, NUMBER = 38, STRING = 39, FLOAT = 40, IDENTIFIER = 41, 
-               WS = 42;
+               LINE_COMMENT = 42, BLOCK_COMMENT = 43, WS = 44;
 
 		public const RULE_sql_statement = 0, RULE_select_statement = 1, RULE_select_list = 2, 
                RULE_select_item = 3, RULE_table_expression = 4, RULE_where_clause = 5, 
@@ -79,11 +79,11 @@ namespace SQLMod {
 		    "UPDATE", "FROM", "WHERE", "IN", "AND", "SET", "QUESTIONMARK", "SHARP", 
 		    "ASmall", "COMMA", "ASTERISK", "OPEN_PAR", "CLOSE_PAR", "OPEN_CURLY_PAR", 
 		    "CLOSE_CURLY_PAR", "EQ", "NUMBER", "STRING", "FLOAT", "IDENTIFIER", 
-		    "WS"
+		    "LINE_COMMENT", "BLOCK_COMMENT", "WS"
 		];
 
 		private const SERIALIZED_ATN =
-			[4, 1, 42, 334, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 
+			[4, 1, 44, 334, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 
 		    7, 4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 2, 8, 7, 8, 2, 9, 7, 9, 
 		    2, 10, 7, 10, 2, 11, 7, 11, 2, 12, 7, 12, 2, 13, 7, 13, 2, 14, 7, 
 		    14, 2, 15, 7, 15, 2, 16, 7, 16, 2, 17, 7, 17, 2, 18, 7, 18, 2, 19, 
