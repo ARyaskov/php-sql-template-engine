@@ -73,17 +73,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AvisitErrorNode\u0028\u0029",
             "name": "visitErrorNode",
-            "summary": "",
+            "summary": "Callback\u0020function\u0020called\u0020when\u0020parser\u0020ends\u0020up\u0020syntax\u0020tree\u0020branch\u0020with\u0020error",
             "url": "classes/SQLMod-TreeShapeListener.html#method_visitErrorNode"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AexitEveryRule\u0028\u0029",
             "name": "exitEveryRule",
-            "summary": "",
+            "summary": "Callback\u0020function\u0020called\u0020when\u0020parser\u0020ends\u0020up\u0020with\u0020the\u0020current\u0020syntactic\u0020rule",
             "url": "classes/SQLMod-TreeShapeListener.html#method_exitEveryRule"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AenterEveryRule\u0028\u0029",
             "name": "enterEveryRule",
-            "summary": "",
+            "summary": "Callback\u0020function\u0020called\u0020when\u0020parser\u0020starts\u0020the\u0020next\u0020syntactic\u0020rule",
             "url": "classes/SQLMod-TreeShapeListener.html#method_enterEveryRule"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003A\u0024result",
@@ -93,12 +93,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003Asurround_with_dots\u0028\u0029",
             "name": "surround_with_dots",
-            "summary": "",
+            "summary": "Converts\u0020string\u0020to\u0020three\u002Ddots\u0020surrounded\u0020substring\u0020in\u0020range\u0020of\u0020\u002B15\/\u002D15\u0020chars",
             "url": "classes/SQLMod-TreeShapeListener.html#method_surround_with_dots"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003Aconvert_respect_type\u0028\u0029",
             "name": "convert_respect_type",
-            "summary": "",
+            "summary": "Converts\u0020value\u0020to\u0020SQL\u002Dformatted\u0020value\u0020based\u0020on\u0020value\u0027s\u0020type",
             "url": "classes/SQLMod-TreeShapeListener.html#method_convert_respect_type"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AtypeFormat\u0028\u0029",
@@ -108,7 +108,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AprocessDirective\u0028\u0029",
             "name": "processDirective",
-            "summary": "",
+            "summary": "Process\u0020the\u0020directive\u0020\u0028e.g.\u0020\u003F\u0023\u0029,\u0020fills\u0020it\u0020with\u0020value\u0020from\u0020args\u0020array\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020class\u0020member\u0020\u0024result",
             "url": "classes/SQLMod-TreeShapeListener.html#method_processDirective"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003A\u0024currentDataIndex",
@@ -158,7 +158,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\SQLMod\\ExpressionFormatter\u003A\u003Aformat\u0028\u0029",
             "name": "format",
-            "summary": "",
+            "summary": "Format\u0020string\u0020based\u0020on\u0020\u0024template\u002Dd\u0020string\u0020and\u0020provided\u0020\u0024args",
             "url": "classes/SQLMod-ExpressionFormatter.html#method_format"
         },                {
             "fqsen": "\\",

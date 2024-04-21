@@ -66,12 +66,23 @@ final class TreeShapeListener implements ParseTreeListener
         }
     }
 
+    /**
+     * Callback function called when parser ends up syntax tree branch with error
+     *
+     * @param ErrorNode $node Current tree node
+     * @return void
+     */
     public function visitErrorNode(ErrorNode $node): void
     {
         throw new \Exception('SQLModParser: Can not handle token near char №' . $node->getSymbol()->getStartIndex() . "\nContext: " . $this->surround_with_dots($this->source_template, $node->getSymbol()->getStartIndex()));
     }
 
-
+    /**
+     * Callback function called when parser ends up with the current syntactic rule
+     *
+     * @param ParserRuleContext $ctx Current rule context
+     * @return void
+     */
     public function exitEveryRule(ParserRuleContext $ctx): void
     {
         switch ($ctx->getRuleIndex()) {
@@ -90,6 +101,12 @@ final class TreeShapeListener implements ParseTreeListener
         }
     }
 
+    /**
+     * Callback function called when parser starts the next syntactic rule
+     *
+     * @param ParserRuleContext $ctx Next rule context
+     * @return void
+     */
     public function enterEveryRule(ParserRuleContext $ctx): void
     {
         $val = $ctx->getText();
@@ -112,11 +129,23 @@ final class TreeShapeListener implements ParseTreeListener
         }
     }
 
+    /**
+     * Gets the result of the formatting procedure
+     *
+     * @return string
+     */
     public function result(): string
     {
         return $this->result;
     }
 
+    /**
+     * Converts string to three-dots surrounded substring in range of +15/-15 chars
+     *
+     * @param string $text full string
+     * @param int $position position in the string
+     * @return string
+     */
     private function surround_with_dots(string $text, int $position): string
     {
         $length = strlen($text);
@@ -136,6 +165,13 @@ final class TreeShapeListener implements ParseTreeListener
         return $surroundedText;
     }
 
+
+    /**
+     * Converts value to SQL-formatted value based on value's type
+     *
+     * @param mixed $value Input value
+     * @return string
+     */
     private function convert_respect_type(mixed $value): string
     {
         $result = "";
@@ -166,6 +202,7 @@ final class TreeShapeListener implements ParseTreeListener
         return $result;
     }
 
+
     private function typeFormat(mixed $v, bool $useSingleQuotes = false): string
     {
         $elementType = gettype($v);
@@ -177,6 +214,12 @@ final class TreeShapeListener implements ParseTreeListener
         };
     }
 
+    /**
+     * Process the directive (e.g. ?#), fills it with value from args array and adds it to the class member $result
+     *
+     * @param string $directive Input directive
+     * @return void
+     */
     private function processDirective(string $directive): void
     {
         $val = $this->data[$this->currentDataIndex];
@@ -238,6 +281,14 @@ final class TreeShapeListener implements ParseTreeListener
 
 final class ExpressionFormatter
 {
+    /**
+     * Format string based on $template-d string and provided $args
+     *
+     * @param string $template Templated string
+     * @param string $skipLiteral Literal for skipping the code part when it occurred 
+     * @param array $args Arguments for replacing directives in templated string
+     * @return string
+     */
     public static function format(string $template, string $skipLiteral, array $args = []): string
     {
         $stream = InputStream::fromString($template);

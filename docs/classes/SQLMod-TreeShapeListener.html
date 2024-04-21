@@ -230,24 +230,28 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Callback function called when parser starts the next syntactic rule</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/SQLMod-TreeShapeListener.html#method_exitEveryRule">exitEveryRule()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Callback function called when parser ends up with the current syntactic rule</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/SQLMod-TreeShapeListener.html#method_result">result()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Gets the result of the formatting procedure</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/SQLMod-TreeShapeListener.html#method_visitErrorNode">visitErrorNode()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Callback function called when parser ends up syntax tree branch with error</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/SQLMod-TreeShapeListener.html#method_visitTerminal">visitTerminal()</a>
@@ -261,18 +265,21 @@
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Converts value to SQL-formatted value based on value&#039;s type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/SQLMod-TreeShapeListener.html#method_processDirective">processDirective()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Process the directive (e.g. ?#), fills it with value from args array and adds it to the class member $result</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/SQLMod-TreeShapeListener.html#method_surround_with_dots">surround_with_dots()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Converts string to three-dots surrounded substring in range of +15/-15 chars</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/SQLMod-TreeShapeListener.html#method_typeFormat">typeFormat()</a>
@@ -682,11 +689,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Callback function called when parser starts the next syntactic rule</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">enterEveryRule</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Antlr\Antlr4\Runtime\ParserRuleContext">ParserRuleContext</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ctx</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -701,7 +709,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Antlr\Antlr4\Runtime\ParserRuleContext">ParserRuleContext</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Next rule context</p>
+</section>
+
             </dd>
             </dl>
 
@@ -723,11 +733,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">86</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Callback function called when parser ends up with the current syntactic rule</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">exitEveryRule</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Antlr\Antlr4\Runtime\ParserRuleContext">ParserRuleContext</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ctx</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -742,7 +753,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Antlr\Antlr4\Runtime\ParserRuleContext">ParserRuleContext</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Current rule context</p>
+</section>
+
             </dd>
             </dl>
 
@@ -764,11 +777,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">115</span>
+    <span class="phpdocumentor-element-found-in__line">137</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Gets the result of the formatting procedure</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">result</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -799,11 +813,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Callback function called when parser ends up syntax tree branch with error</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">visitErrorNode</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Antlr\Antlr4\Runtime\Tree\ErrorNode">ErrorNode</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$node</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -818,7 +833,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Antlr\Antlr4\Runtime\Tree\ErrorNode">ErrorNode</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Current tree node</p>
+</section>
+
             </dd>
             </dl>
 
@@ -884,11 +901,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">139</span>
+    <span class="phpdocumentor-element-found-in__line">175</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Converts value to SQL-formatted value based on value&#039;s type</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">convert_respect_type</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -903,7 +921,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Input value</p>
+</section>
+
             </dd>
             </dl>
 
@@ -929,11 +949,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Process the directive (e.g. ?#), fills it with value from args array and adds it to the class member $result</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">processDirective</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$directive</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -948,7 +969,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Input directive</p>
+</section>
+
             </dd>
             </dl>
 
@@ -970,11 +993,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">120</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Converts string to three-dots surrounded substring in range of +15/-15 chars</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">surround_with_dots</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$text</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$position</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -989,14 +1013,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>full string</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$position</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>position in the string</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1022,7 +1050,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">169</span>
+    <span class="phpdocumentor-element-found-in__line">206</span>
 
     </aside>
 

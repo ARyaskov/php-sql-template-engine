@@ -15,7 +15,7 @@ But the full story is:
 1. Install antlr4 4.13.1+ (e.g. on MacOS)
 ```brew install antlr```
 
-Install PHP8.3.6
+Install PHP8.3.6+
 ```brew install php```
 
 2. In order to generate grammar files (the project has pregenerated ones in `Generated` )
