@@ -91,10 +91,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/SQLMod-TreeShapeListener.html#property_result"
         },                {
-            "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003Asurround_with_dots\u0028\u0029",
-            "name": "surround_with_dots",
+            "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AsurroundWithDots\u0028\u0029",
+            "name": "surroundWithDots",
             "summary": "Converts\u0020string\u0020to\u0020three\u002Ddots\u0020surrounded\u0020substring\u0020in\u0020range\u0020of\u0020\u002B15\/\u002D15\u0020chars",
-            "url": "classes/SQLMod-TreeShapeListener.html#method_surround_with_dots"
+            "url": "classes/SQLMod-TreeShapeListener.html#method_surroundWithDots"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AtypeFormat\u0028\u0029",
             "name": "typeFormat",

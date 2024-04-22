@@ -6,7 +6,7 @@
 
 #PARSERS #LEXERS #ANTLR4 #ANTLR4-PHP
 
-![Project Documentation](https://toivo.tech/php-sql-template-engine/docs/)
+[Project Documentation](https://toivo.tech/php-sql-template-engine/docs/)
 
 # Harnessing
 

@@ -74,7 +74,7 @@ final class TreeShapeListener implements ParseTreeListener
      */
     public function visitErrorNode(ErrorNode $node): void
     {
-        throw new \Exception('SQLModParser: Can not handle token near char №' . $node->getSymbol()->getStartIndex() . "\nContext: " . $this->surround_with_dots($this->source_template, $node->getSymbol()->getStartIndex()));
+        throw new \Exception('SQLModParser: Can not handle token near char №' . $node->getSymbol()->getStartIndex() . "\nContext: " . $this->surroundWithDots($this->source_template, $node->getSymbol()->getStartIndex()));
     }
 
     /**
@@ -146,7 +146,7 @@ final class TreeShapeListener implements ParseTreeListener
      * @param int $position position in the string
      * @return string
      */
-    private function surround_with_dots(string $text, int $position): string
+    private function surroundWithDots(string $text, int $position): string
     {
         $length = strlen($text);
         $paddingLength = 15;
