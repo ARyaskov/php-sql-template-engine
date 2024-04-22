@@ -21,6 +21,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/FpDbTest-Database.html#method_skip"
         },                {
+            "fqsen": "\\FpDbTest\\Database\u003A\u003A\u0024mysqli",
+            "name": "mysqli",
+            "summary": "",
+            "url": "classes/FpDbTest-Database.html#property_mysqli"
+        },                {
             "fqsen": "\\FpDbTest\\DatabaseInterface",
             "name": "DatabaseInterface",
             "summary": "",
