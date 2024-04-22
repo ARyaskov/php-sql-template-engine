@@ -261,13 +261,6 @@
 <dd>Callback function called when parser ends up syntax tree branch with terminal value e.g. &quot;?&quot;</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/SQLMod-TreeShapeListener.html#method_convert_respect_type">convert_respect_type()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Converts value to SQL-formatted value based on value&#039;s type</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/SQLMod-TreeShapeListener.html#method_processDirective">processDirective()</a>
     <span>
                                 &nbsp;: void    </span>
@@ -286,6 +279,7 @@
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Converts value to SQL-formatted value based on value&#039;s type</dd>
 
     </dl>
 
@@ -893,54 +887,6 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_convert_respect_type">
-        convert_respect_type()
-        <a href="classes/SQLMod-TreeShapeListener.html#method_convert_respect_type" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">175</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Converts value to SQL-formatted value based on value&#039;s type</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">convert_respect_type</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$value</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Input value</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_processDirective">
         processDirective()
         <a href="classes/SQLMod-TreeShapeListener.html#method_processDirective" class="headerlink"><i class="fas fa-link"></i></a>
@@ -949,7 +895,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">223</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 
     </aside>
 
@@ -1050,11 +996,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExpressionFormatter.php"><a href="files/src-expressionformatter.html"><abbr title="src/ExpressionFormatter.php">ExpressionFormatter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">206</span>
+    <span class="phpdocumentor-element-found-in__line">175</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Converts value to SQL-formatted value based on value&#039;s type</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">typeFormat</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$useSingleQuotes</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -1069,14 +1016,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Input value</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$useSingleQuotes</span>
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
                  = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Use regular ''(single quotes) or ``(back quotes)</p>
+</section>
+
             </dd>
             </dl>
 
@@ -1222,7 +1173,6 @@
                                             <li><a href="classes/SQLMod-TreeShapeListener.html#method_result">result()</a></li>
                                             <li><a href="classes/SQLMod-TreeShapeListener.html#method_visitErrorNode">visitErrorNode()</a></li>
                                             <li><a href="classes/SQLMod-TreeShapeListener.html#method_visitTerminal">visitTerminal()</a></li>
-                                            <li><a href="classes/SQLMod-TreeShapeListener.html#method_convert_respect_type">convert_respect_type()</a></li>
                                             <li><a href="classes/SQLMod-TreeShapeListener.html#method_processDirective">processDirective()</a></li>
                                             <li><a href="classes/SQLMod-TreeShapeListener.html#method_surround_with_dots">surround_with_dots()</a></li>
                                             <li><a href="classes/SQLMod-TreeShapeListener.html#method_typeFormat">typeFormat()</a></li>

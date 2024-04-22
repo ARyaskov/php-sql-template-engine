@@ -6,6 +6,8 @@
 
 #PARSERS #LEXERS #ANTLR4 #ANTLR4-PHP
 
+![Project Documentation](https://toivo.tech/php-sql-template-engine/docs/)
+
 # Harnessing
 
 0. First of all, the project is fully functioning, grammar was already compiled, just run it with `php src/test.php`

@@ -165,52 +165,23 @@ final class TreeShapeListener implements ParseTreeListener
         return $surroundedText;
     }
 
-
     /**
      * Converts value to SQL-formatted value based on value's type
      *
-     * @param mixed $value Input value
+     * @param mixed $v Input value
+     * @param bool $useSingleQuotes Use regular ''(single quotes) or ``(back quotes)
      * @return string
      */
-    private function convert_respect_type(mixed $value): string
-    {
-        $result = "";
-        $type = gettype($value);
-        switch ($type) {
-            case "string":
-                if ($this->useBackQuotes) {
-                    $result = "`{$value}`";
-                } else {
-                    $result = "'{$value}'";
-                }
-                break;
-            case "integer":
-            case "float":
-                $result = $value;
-                break;
-            case "bool":
-                $result = (int) $value;
-                break;
-            case "NULL":
-                $result = "NULL";
-                break;
-            default:
-                print_r($value);
-                throw new \Exception("Unexpected template value type! Type: '{$type}'");
-        }
-
-        return $result;
-    }
-
-
     private function typeFormat(mixed $v, bool $useSingleQuotes = false): string
     {
         $elementType = gettype($v);
 
         return match ($elementType) {
-            'integer' => strval($v),
-            'string' => $useSingleQuotes ? "'{$v}'" : ($this->useBackQuotes ? "`{$v}`" : "'{$v}'"),
-            'NULL' => "NULL"
+            "integer", "float" => $v,
+            "string" => $useSingleQuotes ? "'{$v}'" : ($this->useBackQuotes ? "`{$v}`" : "'{$v}'"),
+            "bool" => (int) $v,
+            "NULL" => "NULL",
+            default => throw new \Exception("Unexpected template value type! Type: '{$elementType}'")
         };
     }
 
@@ -228,7 +199,7 @@ final class TreeShapeListener implements ParseTreeListener
                 if ($val === null) {
                     $result = "NULL";
                 } else {
-                    $result = $this->convert_respect_type($val);
+                    $result = $this->typeFormat($val);
                 }
                 break;
             case "?d":

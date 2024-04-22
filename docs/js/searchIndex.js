@@ -96,14 +96,9 @@ Search.appendIndex(
             "summary": "Converts\u0020string\u0020to\u0020three\u002Ddots\u0020surrounded\u0020substring\u0020in\u0020range\u0020of\u0020\u002B15\/\u002D15\u0020chars",
             "url": "classes/SQLMod-TreeShapeListener.html#method_surround_with_dots"
         },                {
-            "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003Aconvert_respect_type\u0028\u0029",
-            "name": "convert_respect_type",
-            "summary": "Converts\u0020value\u0020to\u0020SQL\u002Dformatted\u0020value\u0020based\u0020on\u0020value\u0027s\u0020type",
-            "url": "classes/SQLMod-TreeShapeListener.html#method_convert_respect_type"
-        },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AtypeFormat\u0028\u0029",
             "name": "typeFormat",
-            "summary": "",
+            "summary": "Converts\u0020value\u0020to\u0020SQL\u002Dformatted\u0020value\u0020based\u0020on\u0020value\u0027s\u0020type",
             "url": "classes/SQLMod-TreeShapeListener.html#method_typeFormat"
         },                {
             "fqsen": "\\SQLMod\\TreeShapeListener\u003A\u003AprocessDirective\u0028\u0029",
