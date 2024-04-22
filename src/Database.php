@@ -1,9 +1,11 @@
 <?php
-
 namespace FpDbTest;
+
+require_once (dirname(__FILE__) . "/ExpressionFormatter.php");
 
 use Exception;
 use mysqli;
+use SQLMod\ExpressionFormatter;
 
 class Database implements DatabaseInterface
 {
@@ -16,11 +18,11 @@ class Database implements DatabaseInterface
 
     public function buildQuery(string $query, array $args = []): string
     {
-        throw new Exception();
+        return ExpressionFormatter::format($query, $this->skip(), $args);
     }
 
     public function skip()
     {
-        throw new Exception();
+        return "SKIP_IT";
     }
 }
